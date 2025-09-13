@@ -87,3 +87,19 @@ Adding explicit handling for edge cases (like WIDTH not being a power of two).
 Padding logic in the reduction tree to guarantee defined outputs for all widths.
 
 Without inspecting the RTL, an LLM would struggle to infer this simply from waveform mismatches, because it requires mapping synthesis/generate behavior to simulation failures. This makes it an unsolvable closed-box task for an LLM but a natural deduction exercise for a hardware engineer.
+
+N.B.
+
+The entire project was run on Windows 11.
+
+The design was verified synthesizable with Yosys:
+
+docker compose run synth
+
+
+(Yosys script provided in synth_scripts/synth.tcl).
+
+The design was functionally verified with Icarus using both standalone and GHCR Docker flows:
+
+docker compose run verif (Icarus in GHCR)
+
