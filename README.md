@@ -2,11 +2,11 @@
 
 Project selected:
 
-A Leading Zero Counter (LZC) RTL module — a SystemVerilog implementation that scans a binary input word of configurable width and outputs the count of consecutive leading zeros. The repo includes rtl/lzc.sv, a SystemVerilog testbench (verif/tb_lzc.sv), and containerized test/synthesis tooling (Makefile + Docker/GHCR).
+A Leading Zero Counter (LZC) RTL module — a SystemVerilog implementation that scans a binary input word of configurable width and outputs the count of consecutive leading zeros. The repo includes rtl/lzc.sv, a SystemVerilog testbench (verif/tb_lzc.sv), and containerized test/synthesis tooling (Docker/GHCR).
 
 My role here:
 
-Senior RTL engineer / exercise author. I designed the module’s functionality and verification harness, introduced controlled logical bugs for debugging practice, wrote an abstract specification task for a junior engineer, supplied a clean reference solution with fixes and a step-by-step REASONING.md, and set up Docker-based simulation/synthesis infrastructure.
+Senior RTL engineer. I designed the module’s functionality and verification, introduced controlled logical bugs for debugging practice, wrote an abstract specification task for a junior engineer, supplied a clean reference solution with fixes and a step-by-step REASONING.md, and set up Docker-based simulation/synthesis infrastructure.
 
 2. Cloning a repository
 
@@ -52,7 +52,7 @@ Run testbench with maximum width inputs. Observe count > WIDTH.
 
 4. Create a spec or document for a junior engineer to fix the issue.
 
-A debugging specification was provided (task_specification.md).
+A debugging specification was provided (Task_spec.md).
 
 Errors were described abstractly (e.g., wrong zero-handling, off-by-one in MSB, range issues).
 
@@ -64,7 +64,7 @@ The junior engineer must investigate failing cases and derive fixes logically.
 
 A corrected RTL file (rtl/lzc.sv) was provided in the solution branch.
 
-A detailed reasoning document (docs/REASONING.md) explains step-by-step how to identify the bugs, why they occurred, and how to fix them.
+A detailed reasoning document (docs/Reasoning.md) explains step-by-step how to identify the bugs, why they occurred, and how to fix them.
 
 6. Create one question/answer pair you would ask an LLM (like ChatGPT).
 
@@ -96,10 +96,9 @@ The design was verified synthesizable with Yosys:
 
 docker compose run synth
 
-
 (Yosys script provided in synth_scripts/synth.tcl).
 
-The design was functionally verified with Icarus using both standalone and GHCR Docker flows:
+The design was functionally verified with Icarus using GHCR Docker flows:
 
 docker compose run verif (Icarus in GHCR)
 
