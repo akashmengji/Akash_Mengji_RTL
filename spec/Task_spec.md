@@ -14,7 +14,7 @@ The goal was to resolve functional mispredictions and synthesis incompatibilitie
 
 * * *
 
-## Test Harness
+## Test Bench
     
 *   **SystemVerilog testbench**: `verif/tb_lzc.sv`
     
@@ -94,10 +94,9 @@ The testbenches stress both leading and trailing zero modes across different wid
         
 2.  **Debug Reasoning**
     
-    *   This document: `docs/REASONING.md`.
+    *  `docs/Reasoning.md`.
         
 3.  **Verification Evidence**
-    
-    *   Cocotb test results showing correct zero counts across modes and widths.
+   
         
     *   SystemVerilog testbench passing for corner cases.
