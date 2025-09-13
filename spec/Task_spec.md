@@ -15,8 +15,6 @@ The goal was to resolve functional mispredictions and synthesis incompatibilitie
 * * *
 
 ## Test Harness
-
-*   **Cocotb testbench**: `test_lzc.py`
     
 *   **SystemVerilog testbench**: `verif/tb_lzc.sv`
     
